@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Autor" content="Ximena Lopez">
+    <title>The good taste</title>
+
+    <link rel="stylesheet" href="./CSS/estilos1.css"> <!--Menu de navegación-->
+    <link rel="stylesheet" href="./CSS/estilos2.css"> <!-- Banner-->
+    <link rel="stylesheet" href="./CSS/estilos3.css"> <!--Contenido del sitio web-->
+    <link rel="stylesheet" href="./CSS/estilos4.css"> <!--footer-->
+    <link rel="stylesheet" href="./CSS/estilos5.css"> <!--cuadriculas-->
+    <link rel="stylesheet" href="./CSS/estilos7.css">
+    <link rel="stylesheet" href="./slider.html"> <!--slider-->
+
+    <link rel="icon" href="./Imagenes/Imagenes/gorro(favicon).png" type="Imagen/png"> <!--codigo para agragar el favicon -->
+    
+</head>
+
+<body style="background-color: rgb(128, 238, 25);">
+    
+    <img src="Imagenes/Cabeceras/cabecera2.jpg" alt="Cabeceradelsitio" class="Imagenes">
+    <!--miga de pan-->
+    <nav class="migadepan">
+
+        <ul class="menuprimario">
+            <li> <a href="index.html"> Inicio </a> </li>
+            <li> <a href="index2.html"> Recetas </a> </li>
+            <li> <a href=""> Mi cocina </a> </li> 
+            <li> <a href="cocina.html"> Tecnicas y trucos </a> </li>
+            <li> <a href=""> Ingredientes </a> </li>
+            <li> <a href="blog.html"> Blog </a> </li>  
+        </ul>   
+    </nav>
+    <!--fin miga de pan-->
+
+    <section>
+        <br>
+        <section class="banner"> 
+            <div class="bannercontenido">
+                <h1>
+                    La cocina como sabor y fuego
+                </h1>
+                <p>
+                    "Descubre la magia de la cocina: donde el sabor se encuentra con el fuego para crear experiencias inolvidables."
+                </p>
+            </div>
+        </section>
+
+        <section>
+        <div class="contenido">
+            <div style="width: auto; height: auto; border: 2px; margin-top: 10px;">
+                <div class="cuadrado">
+                    <p>
+                        La cocina es la fusión del sabor, que deleita el paladar con una sinfonía de sensaciones
+                        y el fuego, que transforma los ingredientes, liberando aromas y creando texturas únicas. 
+                        Es el arte de combinar ingredientes frescos y técnicas culinarias, donde el fuego es el compañero que domina los alimentos,
+                        conectándonos con la tradición y la cultura culinaria.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </section>
+    </section>
+
+    <section class="breadcrumb">
+        <div class="slider-contenido">
+            <div class="slides">
+                <div class="slide"><img src="Imagenes/Imagenes/slider1.jpg" alt="Imagen 1"></div>
+                <div class="slide"><img src="Imagenes/Imagenes/slider2.jpg" alt="Imagen 2"></div>
+                <div class="slide"><img src="Imagenes/Imagenes/slider3.jpg" alt="Imagen 3"></div>
+                <div class="slide"><img src="Imagenes/Imagenes/slider4.jpg" alt="Imagen 4"></div>
+                <div class="slide"><img src="Imagenes/Imagenes/slider5.jpg" alt="Imagen 5"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button> 
+        </div>
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+    
+            function moveSlide(direction) {
+                currentIndex += direction;
+                if (currentIndex < 0) {
+                    currentIndex = totalSlides - 1;
+                } else if (currentIndex >= totalSlides) {
+                    currentIndex = 0;
+                }
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        </script>
+    </section>
+
+    
+    <section>
+        <div class="contenido">
+            <div class="conten3"><!--menu secundario-->
+                <!-- <img src="/Imagenes/Imagenes/img1.jpg" alt="Imagen sabor" class="Imagen"> -->
+                <h1>Despertar del chef</h1>
+                <p>
+                    En el corazón de cada gran cocinero reside una chispa, 
+                    un momento de epifanía que trasciende la simple ejecución de recetas. 
+                    Lo llamamos el "despertar del chef". 
+                    Es cuando la pasión innata se fusiona con una comprensión profunda de los ingredientes, las técnicas y, sobre todo, la capacidad de evocar emociones a través del plato.
+                    Este despertar no siempre es un evento dramático, sino más bien una evolución constante. 
+                    Un chef despierto es aquel que cuestiona, experimenta y busca la armonía perfecta entre sabor, textura y presentación. 
+                    No se conforma con lo aprendido, sino que se aventura en la exploración de nuevas fronteras culinarias, 
+                    inspirándose en la tradición pero sin estar atado a ella.
+                    Es la conexión íntima con los productos de la tierra, la comprensión de su ciclo y la reverencia por su origen. 
+                    Es la habilidad de transformar lo simple en extraordinario, de contar historias a través de cada bocado. El despertar del chef es un viaje continuo de aprendizaje y descubrimiento, una búsqueda incesante de la excelencia que deleita los sentidos y nutre el alma.
+                </p>
+                <p>
+                    <button class="bt1"> <a href="desperchef.html"> Leer más </a></button>
+                </p>
+            </div>
+            <div class="conten2">
+                <img src="Imagenes/Imagenes/chef.jpg" alt="Imagen" class="imagen">
+            </div>
+        </div>
+    </section>
+    <!--fin de encuentro-->
+    <section>
+        <div class="contenido">
+            <div class="conten3">
+                <h1>Sabores de Colombia</h1> 
+                <p> 
+                    Colombia, tierra de contrastes y exuberante biodiversidad, 
+                    ofrece un festín de sabores tan vibrante como su gente y sus paisajes. 
+                    "Sabores de Colombia" es una invitación a explorar una gastronomía rica y variada, 
+                    moldeada por influencias indígenas, africanas y españolas a lo largo de la historia.
+                    Desde la reconfortante bandeja paisa de la región andina, con su abundancia de frijoles, arroz, carne y plátano maduro, 
+                    hasta los frescos ceviches de las costas caribeña y pacífica, 
+                    cada plato cuenta una historia de su tierra. 
+                    Descubre la intensidad aromática del ajiaco santafereño, la sencillez deliciosa de la arepa en sus múltiples presentaciones
+                    y la explosión de sabor de las frutas tropicales que endulzan cada rincón del país.
+                    "Sabores de Colombia" es más que ingredientes y recetas; es la calidez de la cocina familiar, 
+                    la tradición transmitida de generación en generación, y la celebración de la riqueza natural de esta tierra. 
+                    Es un viaje que deleita el paladar y conecta con la esencia misma de la cultura colombiana.
+                </p>
+                <p>
+                    <button class="bt1"><a href="saborcol.html"> Leer más </a></button>
+                </p>
+            </div>
+            <div class="conten2">
+                <img src="Imagenes/Imagenes/paisa.jpg" alt="Imagen" class="imagen">
+            </div>
+        </div>
+    </section>
+
+    <section> 
+        <div class="contenido">
+            <div class="conten3">
+                <h1>Cocina internacional</h1>
+                <p>
+                    La "Cocina Internacional" es un fascinante tapiz de sabores, técnicas e historias culinarias provenientes de todos los rincones del planeta. 
+                    Es una invitación a viajar sin salir de casa, a explorar culturas y tradiciones a través de sus platos más emblemáticos.
+                    Desde la delicadeza del sushi japonés y la pasión de la pasta italiana, hasta la explosión de especias del curry indio y la reconfortante sencillez de la sopa francesa, 
+                    la cocina internacional nos ofrece una ventana al mundo. Cada receta es un legado, una mezcla de ingredientes locales, influencias históricas y la creatividad de generaciones de cocineros.
+                    Descubrir la cocina internacional es abrirse a nuevas experiencias, a ingredientes desconocidos y a combinaciones sorprendentes. 
+                    Es apreciar la diversidad de enfoques para alimentar el cuerpo y el alma, y reconocer la universalidad del acto de compartir una buena comida. 
+                    Sumérgete en este universo de sabores y deja que tu paladar explore los infinitos matices que el mundo tiene para ofrecer.
+                <p>
+                    <button class="bt1"><a href="cocinter.html"> Leer más </a></button>
+                </p>
+            </div>
+            <div class="conten2">
+                <img src="Imagenes/Imagenes/inter.jpg" alt="Imagen" class="imagen">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contenido">
+            <div class="conten3">
+                <h1>Sabores de temporada</h1>
+                <p>
+                    Los "Sabores de Temporada" adquieren una magia especial cuando se entrelazan con las fechas y celebraciones que marcan nuestros calendarios. 
+                    Estas ocasiones únicas se visten de aromas y gustos particulares, creando recuerdos imborrables a través de la comida.
+                    Desde los dulces navideños que evocan calidez y tradición, hasta los platillos frescos y vibrantes que anuncian la llegada de la primavera y la Semana Santa, 
+                    cada festividad tiene su propio repertorio de delicias. Las cosechas de temporada se convierten en ingredientes estrella, ofreciendo lo mejor de cada momento del año para nuestras mesas.
+                    Los "Sabores de Temporada" en celebraciones no solo nutren el cuerpo, sino que también alimentan el espíritu de comunidad y pertenencia. 
+                    Son recetas transmitidas, rituales culinarios compartidos y la alegría de disfrutar juntos de los frutos de la tierra en momentos significativos. 
+                    Cada bocado se convierte en una celebración en sí mismo, uniendo el sabor con la emoción de la ocasión.
+                </p>
+                <p>
+                <button class="bt1"><a href="sabortem.html"> Leer más </a></button>
+                </p>
+            </div>
+                <div class="conten2">
+                    <img src="Imagenes/Imagenes/sabortem.jpg" alt="Imagen" class="imagen">
+                </div>
+            </div>
+    </section>
+</body>
+
+        <div class="footer-content"> </div>
+            <div class="footer-section">
+                <h3>Vuelve a cocinar con nosotros pronto</h3>
+                <p>Nos encantó tenerte aquí. ¡Que tus próximas creaciones culinarias sean todo un éxito! ¡Te esperamos de vuelta!
+            </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: ximenajuli28@gmail.com</p>
+                    <p>Teléfono: 406 6352 565 </p>
+                    <p>Celurar + 57 1234567890</p>
+                    <p>Direccion: San Fernando, Kilometro 7. Via Oriente, Pasto, Nariño, Colombia</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Mas enlaces</h3>
+                    <p>Concejos de cocina</p>
+                    <p>Ingredientes</p> 
+                    <p>contactos</p>
+                    <p>Mapa del sitio</p>
+                    <p>Politica de privacidad</p>
+                    <p>Preguntas frecuentes</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Mas Información</h3>
+                    <p>Inicio</p>
+                    <p>Nosotros</p> 
+                    <p>Carta</p>
+                    <p>Blog</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<div class="footer-section">
+    <h3>Derechos Reservados</h3>
+    <p>&copy; 2025 The good taste. Todos los derechos reservados.</p>
+</div>
+
+</html>
